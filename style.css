@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
+}
+
+body.clicked section {
+  opacity: .6;
+}
+
+section#about {
+  background-color: #f44336;
+}
+
+section#products {
+  background-color: #4CAF50;
+}
+
+section#services {
+  background-color: #ff9800;
+}
+
+section#contact {
+  background-color: #607d8b;
+}
+
+div#open {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  margin: 40px;
+  z-index: 9999;
+  background-color: black;
+  border-radius: 50%;
+}
+
+div#open svg rect {
+  fill: white;
+  transform-box: fill-box;
+}
+
+div#open svg rect.a {
+  -webkit-transform: translate(10px, 12px);
+          transform: translate(10px, 12px);
+}
+
+div#open svg rect.b {
+  -webkit-transform: translate(10px, 19px);
+          transform: translate(10px, 19px);
+}
+
+body.clicked div#open svg rect.b {
+  opacity: 0;
+}
+
+div#open svg rect.c {
+  -webkit-transform: translate(10px, 26px);
+          transform: translate(10px, 26px);
+}
+
+nav#nav {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  right: -200px;
+  width: 200px;
+  height: 100vh;
+  z-index: 9998;
+  background-color: #999999;
+  color: white;
+  -webkit-transition: right 400ms;
+  transition: right 400ms;
+}
+
+body.clicked nav#nav {
+  right: 0;
+}
+
+nav#nav ul li {
+  list-style: none;
+  padding: 20px 0;
+}
+/*# sourceMappingURL=style.css.map */
